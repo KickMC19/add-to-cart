@@ -31,11 +31,11 @@ function insertCartItem(name, cost, img) {
         <span class="cart-price cart-column">${cost}</span>
         <div class="cart-quantity cart-column">
             <input type="number" class="cart-quantity-input" value="1" min="1">
-            <button class="btn btn-remove" type="button">Remove</button>
+            <button class="btn btn-danger" type="button">Remove</button>
         </div>
     `
     cartContainer.appendChild(row)
-    row.querySelector('.btn-remove').addEventListener('click', removeItem)
+    row.querySelector('.btn-danger').addEventListener('click', removeItem)
     row.querySelector('.cart-quantity-input').addEventListener('input', updateQuantity)
 }
 
